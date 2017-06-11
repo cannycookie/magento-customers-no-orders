@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <EkoUK_CustomersWithoutOrders>
+      <version>0.1.0</version>
+    </EkoUK_CustomersWithoutOrders>
+  </modules>
+  <global>
+      <models>
+          <customerswithoutorders>
+              <class>EkoUK_CustomersWithoutOrders_Model</class>
+              <resourceModel>ekouk_customerswithoutorders_mysql4</resourceModel>
+          </customerswithoutorders>
+          <ekouk_customerswithoutorders_mysql4>
+            <class>EkoUK_CustomersWithoutOrders_Model_Mysql4</class>
+          </ekouk_customerswithoutorders_mysql4>
+      </models>
+    <helpers>
+      <customerswithoutorders>
+        <class>EkoUK_CustomersWithoutOrders_Helper</class>
+      </customerswithoutorders>
+    </helpers>
+	<blocks>
+	  <customerswithoutorders>
+		<class>EkoUK_CustomersWithoutOrders_Block</class>
+	  </customerswithoutorders>
+	</blocks>
+  </global>
+  <admin>
+	<routers>
+		 <adminhtml>
+                <args>
+                    <modules>
+                        <EkoUK_CustomersWithoutOrders before="Mage_Adminhtml">EkoUK_CustomersWithoutOrders_Adminhtml</EkoUK_CustomersWithoutOrders>
+                    </modules>
+                </args>
+            </adminhtml>
+	</routers>
+  </admin>
+</config> 
